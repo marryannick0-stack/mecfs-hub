@@ -1,7 +1,5 @@
 // src/lib/api.js
-// Wrapper für Netlify Functions
-
-const BASE = '/.netlify/functions'
+const BASE = '/api'
 
 async function post(path, body) {
   const res = await fetch(`${BASE}${path}`, {
@@ -15,9 +13,6 @@ async function post(path, body) {
 }
 
 export const api = {
-  claude: (messages, system, max_tokens) =>
-    post('/claude', { messages, system, max_tokens }),
-
   scanNews: (query) =>
     post('/news-scan', { query }),
 
