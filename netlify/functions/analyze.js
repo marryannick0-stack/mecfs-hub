@@ -24,7 +24,7 @@ export const handler = async (event) => {
 
   try {
     const { type, data } = JSON.parse(event.body)
-    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
+    const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash' })
 
     let prompt = ''
 
